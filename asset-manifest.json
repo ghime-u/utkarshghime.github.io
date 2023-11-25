@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.8e900b9b.css",
+    "main.js": "/static/js/main.a95b4d66.js",
+    "static/js/787.2dcca737.chunk.js": "/static/js/787.2dcca737.chunk.js",
+    "static/media/ABOUTME2.png": "/static/media/ABOUTME2.b7574d1447c418157988.png",
+    "static/media/ruggles15.png": "/static/media/ruggles15.661c765ee3d2ec9b1be7.png",
+    "static/media/black.jpg": "/static/media/black.e5ccfb508cb124009051.jpg",
+    "static/media/aboutme.png": "/static/media/aboutme.44dabcb9a346fd3c758a.png",
+    "static/media/CBIR.png": "/static/media/CBIR.b87e573081bc98625676.png",
+    "static/media/education.png": "/static/media/education.88a79355136df5b8445e.png",
+    "static/media/education1.png": "/static/media/education1.6000c11251aa455f1bf0.png",
+    "static/media/aboutme1.png": "/static/media/aboutme1.34585151f4170405b550.png",
+    "static/media/back4.png": "/static/media/back4.13722f95fdcc01da69f5.png",
+    "static/media/cnn.png": "/static/media/cnn.3c5a1f2b95fe566cfcec.png",
+    "static/media/reckoning.png": "/static/media/reckoning.da9f9e88f2425cea98c4.png",
+    "static/media/imu.png": "/static/media/imu.a0012277aff89f768b45.png",
+    "index.html": "/index.html",
+    "main.8e900b9b.css.map": "/static/css/main.8e900b9b.css.map",
+    "main.a95b4d66.js.map": "/static/js/main.a95b4d66.js.map",
+    "787.2dcca737.chunk.js.map": "/static/js/787.2dcca737.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8e900b9b.css",
+    "static/js/main.a95b4d66.js"
+  ]
+}
