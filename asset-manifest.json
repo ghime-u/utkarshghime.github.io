@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/utkarshghime.github.io/static/css/main.441230b6.css",
-    "main.js": "/utkarshghime.github.io/static/js/main.0447ebe3.js",
+    "main.css": "/utkarshghime.github.io/static/css/main.7fbd3e7e.css",
+    "main.js": "/utkarshghime.github.io/static/js/main.2b475cc3.js",
     "static/js/787.2dcca737.chunk.js": "/utkarshghime.github.io/static/js/787.2dcca737.chunk.js",
     "static/media/ABOUTME2.png": "/utkarshghime.github.io/static/media/ABOUTME2.b7574d1447c418157988.png",
     "static/media/ruggles15.png": "/utkarshghime.github.io/static/media/ruggles15.661c765ee3d2ec9b1be7.png",
@@ -13,15 +13,16 @@
     "static/media/aboutme1.png": "/utkarshghime.github.io/static/media/aboutme1.34585151f4170405b550.png",
     "static/media/back4.png": "/utkarshghime.github.io/static/media/back4.13722f95fdcc01da69f5.png",
     "static/media/cnn.png": "/utkarshghime.github.io/static/media/cnn.3c5a1f2b95fe566cfcec.png",
+    "static/media/spacexr.gif": "/utkarshghime.github.io/static/media/spacexr.00324a22123cff490fd5.gif",
     "static/media/reckoning.png": "/utkarshghime.github.io/static/media/reckoning.da9f9e88f2425cea98c4.png",
     "static/media/imu.png": "/utkarshghime.github.io/static/media/imu.a0012277aff89f768b45.png",
     "index.html": "/utkarshghime.github.io/index.html",
-    "main.441230b6.css.map": "/utkarshghime.github.io/static/css/main.441230b6.css.map",
-    "main.0447ebe3.js.map": "/utkarshghime.github.io/static/js/main.0447ebe3.js.map",
+    "main.7fbd3e7e.css.map": "/utkarshghime.github.io/static/css/main.7fbd3e7e.css.map",
+    "main.2b475cc3.js.map": "/utkarshghime.github.io/static/js/main.2b475cc3.js.map",
     "787.2dcca737.chunk.js.map": "/utkarshghime.github.io/static/js/787.2dcca737.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.441230b6.css",
-    "static/js/main.0447ebe3.js"
+    "static/css/main.7fbd3e7e.css",
+    "static/js/main.2b475cc3.js"
   ]
 }
