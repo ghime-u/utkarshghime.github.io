@@ -123,7 +123,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%) scale(0.8);
   width: 50%;
-  max-height: 80vh; /* Adjust the value as needed */
+  height: 80vh; /* Adjust the value as needed */
   overflow-y: auto; /* Add this line */
   background-color: rgba(66, 62, 62, 0.98);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -227,53 +227,6 @@ body {
 .skill:hover {
   background-color: #ccc;
 }
-
-
-/* marquee */
-
-
-
-.marquee-container {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-
-  padding: 10px;
-  background-color: rgba(0, 0, 0, 0);
-  color: #fff;
-  z-index: 0;
-  text-align: center;
-  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.0);
-  overflow: hidden;
-  transition: transform 1s ease-in-out;
-  white-space: nowrap; /* Prevent text from wrapping */
-  overflow-x: hidden; /* Hide horizontal scrollbar */
-}
-
-/* Add this class to set the initial position */
-.initial-position {
-  transform: translateY(80%);
-  overflow: hidden; /* Hide vertical scrollbar when in initial position */
-}
-
-.move-up {
-  transform: translateY(0);
-  overflow: hidden; /* Hide vertical scrollbar when moving up */
-}
-
-/* ... existing styles ... */
-
-
-.marquee-name {
-  font-size: 7vw;
-  color: #ffffff; /* Change the font color as needed, for example, #ff4500 (orange) */
-  white-space: nowrap;
-  width: 100%; 
-  display: inline-block;
-  animation: marqueeAnimation 10s linear infinite;
-}
-
 
 
 
@@ -510,7 +463,8 @@ body {
 
 .project-box {
   width: 80%;
-  height: 400px;
+  height: auto;
+  
   background-color: #444040;
   display: flex;
   justify-content: center;
@@ -535,13 +489,20 @@ body {
 .text-container {
   width: 100%;
   height: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
+
 .video-container video {
+  position: absolute;
+  top: 0;
   width: 100%;
   height: 100%;
-  border-radius: 10px;
+  
+  overflow: hidden;
 }
+
 
 
 /* Add this style for the image container */
@@ -553,9 +514,9 @@ body {
 }
 
 .image-container img {
-  width: 100%;
-  height: 100%;
-  /*object-fit: cover; /* Maintain aspect ratio and cover the container */
+  width: 100%; /* Set a fixed width relative to the viewport width */
+  height: 30vh; /* Set a fixed height relative to the viewport height */
+ 
   border-radius: 10px; /* Same border-radius as the container */
 }
 .text-container {
@@ -568,6 +529,7 @@ body {
 
 .text-container p {
   margin: 0; /* Remove default paragraph margin */
+  font-size: 1.5vw;
 }
 
 .project-name {
@@ -577,7 +539,7 @@ body {
 
 .project-description {
   color: #0dd3d3; /* Set the color for the project description */
-  font-size: 16px; /* Set the font size for the project description */
+  font-size: 0.9vw; /* Set the font size for the project description */
   text-align: left; /* Align text to the left */
   margin-top: 10px; /* Add top margin for spacing */
   font-family: sans-serif; /* Specify a font-family */
@@ -587,14 +549,7 @@ body {
 }
 
 
-@keyframes marqueeAnimation {
-  from {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-} 
+
 
 .about-section {
   background-color: #1b1a1a;
@@ -611,7 +566,7 @@ body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   color: #E5E4E2;
   text-align: center;
-
+  
 }
 
 
@@ -645,3 +600,63 @@ body {
     margin: 10px 0;
   }
 }
+
+
+@media (max-width: 768px) {
+ 
+
+
+  .about-me-icon-container,
+  .education-icon-container,
+  .work-icon-container {
+    display: none;
+  }
+
+  .project-box {
+    width: 100%;
+    margin: 1% 0 20px;
+  }
+  
+  .project-box:hover {
+    transform: none;
+  }
+
+  .project-description {
+    font-size: 1vw; /* Adjust font size for smaller screens */
+    margin-top: 8px; /* Adjust top margin for spacing */
+  }
+
+  .project-description li {
+    margin-bottom: 6px; /* Adjust bottom margin between list items */
+  }
+
+  
+  .image-container {
+    border-radius: 0;
+    
+  }
+  .image-container img{
+    height: 10vh;
+  }
+
+  .about-section p {
+    font-size: 20px;
+  }
+
+  .social-icons {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .social-icon {
+    margin-right: 20px;
+  }
+
+  .about-content img {
+    height: auto;
+    max-width: 100%;
+  }
+}
+
+
+

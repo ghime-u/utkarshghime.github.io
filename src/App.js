@@ -16,12 +16,12 @@ import imu from './assests/images/imu.png';
 import reckoning from './assests/images/reckoning.png';
 import workIcon from './assests/images/education.png';
 import YouTube from 'react-youtube';
-
+import spacex from './assests/images/spacexr.gif';
 
 function App() {
   const [searchInput, setSearchInput] = useState('');
   const [filteredSkills, setFilteredSkills] = useState([]);
-
+  
   const handleSearchInputChange = (e) => {
     const inputValue = e.target.value.toLowerCase();
     setSearchInput(inputValue);
@@ -146,6 +146,20 @@ function App() {
   };
   
 
+  const imageContainerStyle = {
+    // Your specific styles for the image container go here
+    // For example:
+    border: '2px solid #ccc',
+    borderRadius: '8px',
+    boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
+  };
+
+  const imageStyle = {
+    width: '50%',
+    height: '50%',
+    objectFit: 'cover', // This property ensures that the image covers the entire container
+  };
+
 
 
   const [showHelloMessage, setShowHelloMessage] = useState(true);
@@ -163,6 +177,10 @@ function App() {
   const [showEducationPopup, setShowEducationPopup] = useState(false);
   const [showaboutmePopup, setShowaboutmePopup] = useState(false);
   const [showWorkPopup, setShowWorkPopup] = useState(false);
+
+
+
+  
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -331,11 +349,11 @@ function App() {
           <div id="projects" className="project-section">
             
             <div className="project-box">
-            <div className="video-container">
+            <div class="video-container">
               <YouTube videoId="-HEcd3c-iq8" />
             </div>
             <div class="text-container">
-              <p class="project-name">Project: Autonomous Guidance System using Deep Learning and RRT*</p>
+              <p class="project-name">Project: Autonomous Guidance System using Deep Learning</p>
           
               <ul class = "project-description">
                 <li>Developed and deployed a cutting-edge autonomous guidance system for Universal Robots, enhancing human-robot collaboration, enabling 3D mapping, obstacle avoidance, and safe task execution.</li>
@@ -367,11 +385,94 @@ function App() {
         </div>
 
         <div className="project-box">
+            <div className="video-container">
+              <YouTube videoId="jbq_fD94-2Y"/>
+            </div>
+            <div class="text-container">
+              
+            <p class="project-name">"Modular Deep Q-Learning Framework for Reinforcement Learning in OpenAI Gym Environments"</p>
+            <ul class="project-description">
+            <li><strong>DQN Training Framework:</strong> Implemented a reinforcement learning script employing a Deep Q-Network (DQN) algorithm for training agents in the OpenAI Gym environment.</li>
+            <li><strong>Custom DQN Model:</strong> Engineered a bespoke DQN model, adhering to the specifications of the problem, and employed a replay memory mechanism to enhance the model's ability to learn from past experiences.</li>
+            <li><strong>Flexible Training Parameters:</strong> Engineered the script to accommodate dynamic training parameters, including replay size, batch size, exploration strategy (epsilon-greedy), and the discount factor (gamma) to facilitate fine-tuning and experimentation.</li>
+            <li><strong>Checkpointing Mechanism:</strong> Integrated a checkpointing mechanism that saves model states at predefined intervals, enabling the retrieval of intermediate and final models for detailed analysis, debugging, or seamless continuation of training.</li>
+            <li><strong>Performance Monitoring:</strong> Implemented tracking mechanisms for episode returns, lengths, and losses, providing detailed insights into the learning dynamics and convergence behavior of the DQN algorithm over the training period.</li>
+            <li><strong>Modularity and Reusability:</strong> Designed the script with modularity in mind, offering a versatile and reusable codebase that can be readily applied to different environments, facilitating experimentation and sharing of models at various stages of the training process.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="project-box">
+      <div className="image-container" style={imageContainerStyle}>
+        <img src={spacex} alt="Project Image" style={imageStyle} />
+      </div>
+          <div className="text-container">
+            <a href="https://github.com/ghime-u/EECE5554/tree/main/LAB4/src" className="project-name">
+              <p>Space X falcon 9 Landing Simulation using Reinforcement Learning<FontAwesomeIcon icon={faLink} /></p>
+            </a>
+
+            <ul className="project-description">
+            <li>The paper explores the use of Reinforcement Learning (RL) for the autonomous and precise landing of SpaceX Falcon 9 rockets on designated target zones.</li>
+<li>Three RL algorithms (DDPG, SAC, and PPO) were employed to train an agent within a physics-based simulation framework called RocketLander, which models the dynamics of rocket landing.</li>
+<li>The state space of the environment includes crucial variables like rocket position, orientation, leg ground contact indicators, engine gimbal angle, and velocities, while the action space consists of gimbal, throttle, and control thruster adjustments.</li>
+<li>The reward system incorporates a base reward, shaping rewards based on distance, speed, angle, ground contact, and reward shaping difference. A landing reward is given for successful landings, with additional penalties for incomplete episodes.</li>
+<li>The physics simulation integrates principles of mechanics using the Box2D physics engine to emulate gravitational forces, aerodynamic effects, and collision mechanics, providing a realistic landing environment.</li>
+<li>Comparative analysis of the RL algorithms showed that SAC outperformed DDPG and PPO in terms of stability, success rate, and training speed. The study emphasizes the importance of experimentation and fine-tuning in RL applications for rocket landing.</li>
+            </ul>
+          </div>
+        </div>
+
+        
+
+      
+        <div className="project-box">
+  <div className="image-container">
+    <img src={imu} alt="Project Image" />
+  </div>
+  <div className="text-container">
+    <a href="https://github.com/ghime-u/EECE5554/tree/main/LAB4/src" className="project-name">
+      <p>IMU, GPS, Magnetometer Navigation <FontAwesomeIcon icon={faLink} /></p>
+    </a>
+
+    <ul className="project-description">
+      <li><strong>Data Collection:</strong> The project commenced with the collection of sensor data using the self-driving NUANCE car.</li>
+
+      <li><strong>Magnetometer Distortions:</strong> Calibration addresses hard iron and soft iron distortions caused by nearby objects. Compensation methods mitigate these distortions.</li>
+
+      <li><strong>Calibration Process:</strong> Involves correcting hard iron through offsets for x, y, and z data and soft iron by calculating scale factors based on average values. Result: calibrated magnetic field measurements.</li>
+
+      <li><strong>Complementary Filter:</strong> Combines low-pass filtered magnetometer data and high-pass filtered gyro data using a weighted sum. Cutoff frequencies and filter coefficients determined using Butterworth filter design.</li>
+
+      <li><strong>Yaw Data:</strong> Robust yaw estimation by combining magnetometer-based and gyro-based estimates. Tilt compensation enhances accuracy in magnetometer-based estimates.</li>
+
+      <li><strong>Forward Velocity Estimate:</strong> Utilizes a low-pass filter to remove noise, followed by fitting a third-order polynomial to eliminate long-term drift or bias. Incorporates accelerometer-based and GPS-based velocity estimates for improved accuracy.</li>
+    </ul>
+  </div>
+</div>
+<div className="project-box">
+            <div className="video-container">
+              <YouTube videoId="g-sIYQ6HBTE" />
+            </div>
+            <div class="text-container">
+              
+              <p class="project-name">Stereo Camera-Based Path Planning: RRT and CNN for Obstacle Avoidance</p>
+            <ul class="project-description">
+            <li>The project aims to enhance robot navigation in scenarios like search and rescue by utilizing stereo cameras for depth estimation and computer vision algorithms.</li>
+            <li>Depth information is obtained through triangulation, with obstacle course setup and calibration of the stereo camera system.</li>
+            <li>Rapidly Exploring Random Trees (RRT) algorithm is implemented for optimal path planning, addressing challenges in obstacle avoidance through incremental exploration of state space.</li>
+            <li>The integration of Convolutional Neural Networks (CNNs) enhances obstacle detection and classification, particularly for recognizing road signs, providing additional constraints for path planning.</li>
+            <li>The average Root Mean Square (RMS) error across instances, representing the disparity between LiDAR-measured distances and those obtained through the proposed method, is approximately 15.048 cm, demonstrating the accuracy of the depth detection algorithm in the experimental results.</li>
+
+            </ul>
+          </div>
+        </div>
+
+        <div className="project-box">
             <div className="image-container">
               <img src= {CBIR} alt="Project Image"/>
             </div>
             <div class="text-container">
-              <a href ="https://github.com/ghime-u/EECE5554/tree/main/LAB5" class="project-name"> <p>Content-Based Image Retrieval and Object Detection <FontAwesomeIcon icon={faLink} /></p></a>
+              <a href ="https://github.com/ghime-u/CBIR_5" class="project-name"> <p>Content-Based Image Retrieval and Object Detection <FontAwesomeIcon icon={faLink} /></p></a>
             <ul class="project-description">
             <li>Implemented a template detect function using OpenCV for baseline image matching, with the sum of squared differences serving as an effective distance metric.</li>
             <li>Introduced histogram matching based on 3-channel RGB histograms to compare images using color values, ranking images through a normalized min value difference.</li>
@@ -401,6 +502,8 @@ function App() {
           </div>
         </div>
 
+        
+
         <div className="project-box">
             <div className="image-container">
               <img src= {ruggles} alt="Project Image"/>
@@ -419,26 +522,7 @@ function App() {
           </div>
         </div>
 
-        <div className="project-box">
-        <div className="image-container">
-              <img src= {imu} alt="Project Image"/>
-            </div>
-            <div className="text-container">
-            <a href ="https://github.com/ghime-u/EECE5554/tree/main/LAB4/src" class="project-name"> <p>IMU, GPS, Magnetometer Navigation<FontAwesomeIcon icon={faLink} /></p></a>
-            
-              <ul className="project-description">
-                <li><strong>Magnetometer Distortions:</strong> Nearby objects create magnetic disturbances, categorized into hard iron and soft iron distortions. Calibration using hard and soft iron compensation can mitigate these distortions.</li>
-
-                <li><strong>Calibration Process:</strong> It involves hard iron correction by finding offsets for x, y, and z data, and soft iron correction by calculating scale factors based on average values. Result: calibrated magnetic field measurements.</li>
-
-                <li><strong>Complementary Filter:</strong> Combines low-pass filtered magnetometer data and high-pass filtered gyro data using a weighted sum. Cutoff frequencies and filter coefficients are determined using the Butterworth filter design method.</li>
-
-                <li><strong>Yaw Data:</strong> Combining magnetometer-based and gyro-based estimates for robust yaw estimation. Tilt compensation improves accuracy in magnetometer-based estimates.</li>
-
-                <li><strong>Forward Velocity Estimate:</strong> Application of a low-pass filter to remove noise, followed by fitting a third-order polynomial to remove long-term drift or bias. Combining accelerometer-based and GPS-based velocity estimates for improved accuracy.</li>
-              </ul>
-            </div>
-          </div>
+        
 
           <div className="project-box">
           <div className="image-container">
@@ -482,6 +566,7 @@ function App() {
         </div>
         <div class="about-content">
           <img src= {about} alt="Description"/>
+          <h5>@utkarshghime 2023</h5>
         </div>
       </div>
     </div>
